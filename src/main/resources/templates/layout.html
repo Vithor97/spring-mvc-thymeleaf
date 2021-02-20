@@ -46,7 +46,7 @@
 	<script src="/webjars/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
 	<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
+	<script th:inline ="javascript">
 	
 		var ulr = '';
 		
@@ -68,6 +68,21 @@
 		        $(".sidebar").toggleClass("sidebar-open");
 		    })
 		});
+		
+		
+	
+		$('#alertSucesso').delay(2000).fadeOut('slow')
+		$('#alertErro').delay(2000).fadeOut('slow')
+		  //setTimeout(function() {
+		  //      $("#alertSucesso").hide()
+		  //  }, 3000);
+		
+		
+		function testeFn(msg){
+			alert(msg)
+		}
+		
+    
 
 	</script>
 </body>

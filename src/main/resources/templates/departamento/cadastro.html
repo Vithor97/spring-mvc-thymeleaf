@@ -22,6 +22,9 @@
 	        </nav>
 	
 	        <div class="container" id="cadastro">
+	        
+	        	<div th:replace="fragments/alert"></div>
+	        	
 	            <form th:action="${departamento.id == null} ? @{/departamentos/salvar} : @{/departamentos/editar}" 
 	            		th:object="${departamento}" method="POST">
 	                <div class="form-row">
@@ -34,8 +37,9 @@
 	                <input type="hidden" id="id" th:field="*{id}"/>
 	                <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
 	            </form>
+	                
 	        </div>
 	    </section>
-	
+	    
 </body>
 </html>
