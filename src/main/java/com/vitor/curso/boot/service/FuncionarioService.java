@@ -1,5 +1,6 @@
 package com.vitor.curso.boot.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import com.vitor.curso.boot.domain.Funcionario;
@@ -17,4 +18,8 @@ public interface FuncionarioService {
 	List<Funcionario> buscarTodos();
 
 	List<Funcionario> buscarPorNome(String nome);
+
+	List<Funcionario> buscarPorCargo(Long id);
+
+	List<Funcionario> buscarPorDatas(LocalDate entrada, LocalDate saida);
 }
